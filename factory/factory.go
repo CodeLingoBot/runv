@@ -54,7 +54,7 @@ func NewFromConfigs(bootConfig hypervisor.BootConfig, configs []FactoryConfig) F
 	}
 }
 
-// vmFactoryPolicy = [FactoryConfig,]*FactoryConfig
+// NewFromPolicy = [FactoryConfig,]*FactoryConfig
 // FactoryConfig   = {["cache":NUMBER,]["template":true|false,]"cpu":NUMBER,"memory":NUMBER}
 func NewFromPolicy(bootConfig hypervisor.BootConfig, policy string) Factory {
 	var configs []FactoryConfig

@@ -25,7 +25,7 @@ type ProcessList struct {
 	file *os.File
 }
 
-// Return locked processlist, which needs to be released by caller after using
+// NewProcessList returns locked processlist, which needs to be released by caller after using
 func NewProcessList(root, name string) (*ProcessList, error) {
 	f, err := os.OpenFile(filepath.Join(root, name, processJSON), os.O_RDWR|os.O_CREATE, 0644)
 	if err != nil {
